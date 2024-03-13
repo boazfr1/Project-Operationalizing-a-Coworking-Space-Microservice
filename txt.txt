@@ -1,0 +1,16 @@
+aws eks --region us-east-1 update-kubeconfig --name Project-Operationalizing-a-Coworking-Space-Microservice
+
+Database name: mydatabase
+User name: myuser
+Password: mypassword
+
+export DB_USERNAME=myuser
+export DB_PASSWORD=mypassword
+export DB_HOST=127.0.0.1
+export DB_PORT=5433
+export DB_NAME=mydatabase
+
+kubectl port-forward --namespace default svc/postgresql-service 5433:5432 &
+
+curl 127.0.0.1:5433/api/reports/daily_usage
+
