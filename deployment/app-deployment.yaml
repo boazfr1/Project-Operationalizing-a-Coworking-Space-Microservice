@@ -32,7 +32,7 @@ spec:
       - name: coworking
 
 
-        image: 685652915875.dkr.ecr.us-east-1.amazonaws.com/project-operationalizing-a-coworking-space-microservice:1.1
+        image: 685652915875.dkr.ecr.us-east-1.amazonaws.com/project-operationalizing-a-coworking-space-microservice:1.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
@@ -59,9 +59,4 @@ spec:
           value: mydatabase
       restartPolicy: Always
           
-          
-          
-          # valueFrom:
-          #   secretKeyRef:
-          #     name: postgresql-service-postgresql
-          #     key: postgres-password
+  
