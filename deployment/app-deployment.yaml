@@ -54,10 +54,14 @@ spec:
         - name: DB_USERNAME
           value: myuser
         - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: postgresql-service-postgresql
-              key: postgres-password
+          value: mypassword
         - name: DB_NAME
           value: mydatabase
       restartPolicy: Always
+          
+          
+          
+          # valueFrom:
+          #   secretKeyRef:
+          #     name: postgresql-service-postgresql
+          #     key: postgres-password
